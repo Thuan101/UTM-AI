@@ -1,1 +1,1712 @@
-<html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c0{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c1{padding-top:0pt;padding-bottom:0pt;line-height:1.15;text-align:left;height:11pt}.c2{padding-top:0pt;padding-bottom:0pt;line-height:1.15;text-align:left}.c3{background-color:#ffffff;max-width:468pt;padding:72pt 72pt 72pt 72pt}.title{padding-top:24pt;color:#000000;font-weight:700;font-size:36pt;padding-bottom:6pt;font-family:"Arial";line-height:1.0;page-break-after:avoid;text-align:left}.subtitle{padding-top:18pt;color:#666666;font-size:24pt;padding-bottom:4pt;font-family:"Georgia";line-height:1.0;page-break-after:avoid;font-style:italic;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:12pt;color:#000000;font-weight:700;font-size:24pt;padding-bottom:12pt;font-family:"Arial";line-height:1.0;text-align:left}h2{padding-top:11.2pt;color:#000000;font-weight:700;font-size:18pt;padding-bottom:11.2pt;font-family:"Arial";line-height:1.0;text-align:left}h3{padding-top:12pt;color:#000000;font-weight:700;font-size:14pt;padding-bottom:12pt;font-family:"Arial";line-height:1.0;text-align:left}h4{padding-top:12.8pt;color:#000000;font-weight:700;font-size:12pt;padding-bottom:12.8pt;font-family:"Arial";line-height:1.0;text-align:left}h5{padding-top:12.8pt;color:#000000;font-weight:700;font-size:9pt;padding-bottom:12.8pt;font-family:"Arial";line-height:1.0;text-align:left}h6{padding-top:18pt;color:#000000;font-weight:700;font-size:8pt;padding-bottom:18pt;font-family:"Arial";line-height:1.0;text-align:left}</style></head><body class="c3 doc-content"><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&lt;!doctype html&gt;</span></p><p class="c2"><span class="c0">&lt;html lang=&quot;vi&quot;&gt;</span></p><p class="c2"><span class="c0">&lt;head&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;meta charset=&quot;UTF-8&quot; /&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;title&gt;T John AI Ultimate&lt;/title&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;meta name=&quot;description&quot; content=&quot;T John AI Ultimate - Single-file dashboard for Hugging Face Spaces, Vercel, and GitHub Pages.&quot; /&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;script src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;script src=&quot;https://unpkg.com/lucide@latest&quot;&gt;&lt;/script&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/styles/github-dark.min.css&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;script src=&quot;https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/lib/highlight.min.js&quot;&gt;&lt;/script&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;script src=&quot;https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/lib/languages/javascript.min.js&quot;&gt;&lt;/script&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;script src=&quot;https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/lib/languages/python.min.js&quot;&gt;&lt;/script&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;script src=&quot;https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/lib/languages/css.min.js&quot;&gt;&lt;/script&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;script src=&quot;https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/lib/languages/xml.min.js&quot;&gt;&lt;/script&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;style&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; :root {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --bg0: #060a12;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --bg1: #0b1220;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --bg2: #111b2e;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --panel: rgba(12, 17, 30, 0.78);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --panel-strong: rgba(15, 21, 36, 0.96);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --line: rgba(127, 199, 255, 0.14);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --text: #e7eef9;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --muted: rgba(231, 238, 249, 0.72);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --blue: #7fc7ff;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --blue-2: #4aa3ff;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --orange: #ff8c38;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --orange-2: #ffb066;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --green: #42d392;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --red: #ff6b6b;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --shadow: 0 24px 80px rgba(0, 0, 0, 0.36);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --radius-xl: 30px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --radius-lg: 22px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --radius-md: 16px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --mono: &quot;IBM Plex Mono&quot;, ui-monospace, SFMono-Regular, Menlo, monospace;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --sans: &quot;IBM Plex Sans&quot;, system-ui, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; --title: &quot;Bricolage Grotesque&quot;, system-ui, sans-serif;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; * { box-sizing: border-box; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; html { scroll-behavior: smooth; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; body {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; margin: 0;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; min-width: 320px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; min-height: 100vh;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; color: var(--text);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; font-family: var(--sans);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background:</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; radial-gradient(circle at top left, rgba(74, 163, 255, 0.28), transparent 26%),</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; radial-gradient(circle at top right, rgba(127, 199, 255, 0.12), transparent 22%),</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; radial-gradient(circle at bottom right, rgba(255, 140, 56, 0.08), transparent 22%),</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 44%, #05070d 100%);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; overflow-x: hidden;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; button, input, textarea, select { font: inherit; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; a { color: inherit; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .app-shell {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; min-height: 100vh;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; padding: 24px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .frame {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; min-height: calc(100vh - 48px);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255,255,255,0.08);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius: 34px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background:</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; linear-gradient(145deg, rgba(74, 163, 255, 0.12), transparent 22%),</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; linear-gradient(315deg, rgba(255, 140, 56, 0.08), transparent 20%),</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; rgba(8, 12, 20, 0.92);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; box-shadow: var(--shadow);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; backdrop-filter: blur(24px);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; padding: 24px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .topbar {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; justify-content: space-between;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; gap: 16px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; align-items: flex-start;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; margin-bottom: 20px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .brand {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: grid;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; gap: 10px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .kicker {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; margin: 0;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; text-transform: uppercase;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; letter-spacing: 0.28em;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; font-size: 12px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; color: var(--blue);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .title {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; margin: 0;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; font-family: var(--title);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; font-size: clamp(2rem, 4vw, 3.6rem);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; letter-spacing: -0.04em;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; line-height: 0.94;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .lede {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; max-width: 72ch;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; margin: 0;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; color: var(--muted);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; line-height: 1.65;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .status-row {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; flex-wrap: wrap;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; gap: 10px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; align-items: flex-start;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; justify-content: flex-end;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .pill {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: inline-flex;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; align-items: center;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; gap: 8px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; padding: 10px 14px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius: 999px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(255,255,255,0.05);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255,255,255,0.09);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; color: var(--text);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; white-space: nowrap;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .pill strong { color: var(--blue); font-weight: 700; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .pill.live { border-color: rgba(66, 211, 146, 0.24); color: #c9ffe5; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .pill.locked { border-color: rgba(255, 107, 107, 0.22); color: #ffd2d2; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .tabs {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: inline-flex;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; gap: 10px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; padding: 8px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius: 999px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(255,255,255,0.04);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255,255,255,0.08);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; margin-bottom: 20px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .tab {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border: 0;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius: 999px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; padding: 11px 18px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background: transparent;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; color: var(--text);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; cursor: pointer;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; transition: transform .18s ease, background .18s ease, border-color .18s ease;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .tab:hover, .btn:hover, .chip:hover { transform: translateY(-1px); }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .tab.active {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background: linear-gradient(135deg, rgba(74, 163, 255, 0.24), rgba(49, 112, 255, 0.18));</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(127, 199, 255, 0.24);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .grid {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: grid;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; grid-template-columns: minmax(360px, 0.92fr) minmax(440px, 1.08fr);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; gap: 18px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; min-height: calc(100vh - 220px);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .panel {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius: var(--radius-xl);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255,255,255,0.08);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background: linear-gradient(180deg, rgba(255,255,255,0.05), transparent 22%), var(--panel);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; overflow: hidden;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; min-height: 0;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .panel-inner {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; padding: 20px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: grid;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; gap: 16px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; min-height: 100%;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .panel-head {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; justify-content: space-between;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; gap: 16px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; align-items: flex-start;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .panel-head h2 {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; margin: 0;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; font-family: var(--title);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; letter-spacing: -0.04em;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; font-size: 1.5rem;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .muted { color: var(--muted); }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .chips { display: flex; flex-wrap: wrap; gap: 10px; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .chip {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255,255,255,0.08);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(255,255,255,0.05);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; color: var(--text);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; padding: 10px 14px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius: 999px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; cursor: pointer;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .chat {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; min-height: 0;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; overflow: auto;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; flex-direction: column;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; gap: 14px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; padding-right: 4px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; max-height: 52vh;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .msg {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; max-width: 94%;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; padding: 15px 16px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius: 18px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255,255,255,0.08);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; animation: fadeIn .18s ease both;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; white-space: pre-wrap;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; line-height: 1.7;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .msg.user {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; align-self: flex-end;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background: linear-gradient(135deg, rgba(255, 140, 56, 0.18), rgba(255, 176, 102, 0.12));</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .msg.assistant {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; align-self: flex-start;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(255,255,255,0.04);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .msg.error {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; align-self: flex-start;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(255, 107, 107, 0.12);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border-color: rgba(255, 107, 107, 0.22);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .msg .role {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: inline-block;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; margin-bottom: 8px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; text-transform: uppercase;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; letter-spacing: .18em;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; color: var(--blue);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; font-size: 12px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .composer, .auth-card, .mini-card {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius: var(--radius-lg);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255,255,255,0.08);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(255,255,255,0.04);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; padding: 16px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .composer textarea, .auth-card input, .side-input, .urlbox {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; width: 100%;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255,255,255,0.10);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(4, 8, 16, 0.78);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; color: var(--text);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius: 16px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; padding: 14px 15px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; outline: none;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .composer textarea, .urlbox { min-height: 112px; resize: vertical; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .composer textarea:focus, .auth-card input:focus, .side-input:focus, .urlbox:focus {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border-color: rgba(127, 199, 255, 0.45);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; box-shadow: 0 0 0 3px rgba(74, 163, 255, 0.12);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .composer-footer, .row {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; justify-content: space-between;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; align-items: flex-start;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; gap: 12px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; flex-wrap: wrap;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .btn {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border: 0;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius: 999px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; padding: 12px 18px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; cursor: pointer;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .btn.primary {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background: linear-gradient(135deg, var(--orange), #ff6e1b);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; color: white;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; box-shadow: 0 18px 36px rgba(255, 116, 35, 0.24);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; font-weight: 700;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .btn.secondary {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(255,255,255,0.06);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; color: var(--text);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255,255,255,0.1);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .btn.danger {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(255, 107, 107, 0.14);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; color: #ffd7d7;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255, 107, 107, 0.18);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .btn:disabled {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; opacity: 0.6;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; cursor: not-allowed;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; transform: none !important;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .small {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; font-size: 0.92rem;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; color: var(--muted);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; line-height: 1.55;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .error-box {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255, 107, 107, 0.2);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(255, 107, 107, 0.08);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; color: #ffd8d8;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius: 18px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; padding: 14px 16px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: grid;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; gap: 10px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .error-title { margin: 0; font-weight: 700; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .side {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: grid;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; gap: 16px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; min-height: 0;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .side-grid {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: grid;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; grid-template-columns: 1fr;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; gap: 14px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .side-top {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: grid;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; gap: 12px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .codebox {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius: 20px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255,255,255,0.08);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; overflow: hidden;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background: #0b1020;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; min-height: 52vh;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; flex-direction: column;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .codebox pre {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; margin: 0;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; padding: 16px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; overflow: auto;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; flex: 1;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; font-family: var(--mono);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; font-size: 13px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; line-height: 1.6;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .codebox code { font-family: var(--mono); }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .mini-card h3 {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; margin: 0 0 8px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; font-family: var(--title);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; letter-spacing: -0.03em;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .overlay {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; position: fixed;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; inset: 0;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; z-index: 50;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: grid;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; place-items: center;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; padding: 18px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background:</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; radial-gradient(circle at top, rgba(74, 163, 255, 0.22), transparent 28%),</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; rgba(2, 5, 12, 0.92);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; backdrop-filter: blur(18px);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .overlay.hidden { display: none; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .overlay-card {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; width: min(760px, 100%);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius: 28px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(127, 199, 255, 0.18);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background: linear-gradient(180deg, rgba(18, 24, 40, 0.98), rgba(8, 12, 20, 0.98));</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; box-shadow: var(--shadow);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; padding: 24px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .overlay-card h2 {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; margin: 0;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; font-family: var(--title);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; font-size: clamp(1.8rem, 4vw, 2.8rem);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; letter-spacing: -0.04em;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .overlay-card p { color: var(--muted); line-height: 1.6; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .overlay-grid {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: grid;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; grid-template-columns: 1fr 1fr;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; gap: 14px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; margin-top: 16px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .overlay-grid input {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; width: 100%;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; padding: 14px 15px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius: 14px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255,255,255,0.10);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; background: rgba(4, 8, 16, 0.78);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; color: var(--text);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; outline: none;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .overlay-actions {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; margin-top: 16px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; gap: 10px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; flex-wrap: wrap;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .footerbar {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; justify-content: space-between;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; gap: 12px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; flex-wrap: wrap;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; margin-top: 16px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; color: var(--muted);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; font-size: 0.94rem;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .hidden { display: none !important; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; .spin {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; display: inline-block;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; width: 12px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; height: 12px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border-radius: 999px;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border: 2px solid rgba(255,255,255,0.18);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; border-top-color: white;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; animation: spin 1s linear infinite;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; @keyframes spin { to { transform: rotate(360deg); } }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; @keyframes fadeIn {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; from { opacity: 0; transform: translateY(6px); }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; to { opacity: 1; transform: translateY(0); }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; @media (max-width: 1120px) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; .grid { grid-template-columns: 1fr; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; .codebox { min-height: 42vh; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; .overlay-grid { grid-template-columns: 1fr; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; .topbar { flex-direction: column; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; .status-row { justify-content: flex-start; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; @media (max-width: 720px) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; .app-shell { padding: 12px; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; .frame { padding: 14px; border-radius: 24px; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; .chat { max-height: 38vh; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; .msg { max-width: 100%; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; .panel-inner { padding: 14px; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &lt;/style&gt;</span></p><p class="c2"><span class="c0">&lt;/head&gt;</span></p><p class="c2"><span class="c0">&lt;body&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;div id=&quot;overlay&quot; class=&quot;overlay&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;div class=&quot;overlay-card&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;p class=&quot;kicker&quot;&gt;Persistent Login&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;h2&gt;Nh&#7853;p HF_TOKEN &#273;&#7875; v&agrave;o th&#7859;ng Dashboard&lt;/h2&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; Token s&#7869; &#273;&#432;&#7907;c l&#432;u b&#7857;ng &lt;code&gt;localStorage&lt;/code&gt; tr&ecirc;n tr&igrave;nh duy&#7879;t c&#7911;a b&#7841;n.</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; L&#7847;n m&#7903; sau, trang s&#7869; t&#7921; nh&#7853;n di&#7879;n v&agrave; v&agrave;o tr&#7921;c ti&#7871;p giao di&#7879;n &#273;i&#7873;u khi&#7875;n.</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;overlay-grid&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;small&quot; for=&quot;tokenInput&quot;&gt;HF_TOKEN&lt;/label&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input id=&quot;tokenInput&quot; type=&quot;password&quot; autocomplete=&quot;off&quot; placeholder=&quot;hf_...&quot; /&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;small&quot; for=&quot;modelInput&quot;&gt;MODEL_NAME&lt;/label&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input id=&quot;modelInput&quot; type=&quot;text&quot; value=&quot;Qwen/Qwen2.5-72B-Instruct&quot; /&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;overlay-grid&quot; style=&quot;margin-top: 12px;&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;small&quot; for=&quot;fallbackInput&quot;&gt;Fallback model&lt;/label&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input id=&quot;fallbackInput&quot; type=&quot;text&quot; value=&quot;meta-llama/Llama-3.1-8B-Instruct&quot; /&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;small&quot; for=&quot;endpointInput&quot;&gt;HF Endpoint&lt;/label&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input id=&quot;endpointInput&quot; type=&quot;text&quot; value=&quot;https://router.huggingface.co/v1/chat/completions&quot; /&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;overlay-actions&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;button id=&quot;saveTokenBtn&quot; class=&quot;btn primary&quot; type=&quot;button&quot;&gt;&lt;span data-lucide=&quot;lock-keyhole-open&quot; style=&quot;width:16px;height:16px;vertical-align:-3px;margin-right:6px;&quot;&gt;&lt;/span&gt;L&#432;u token &amp; V&agrave;o Dashboard&lt;/button&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;button id=&quot;useDemoBtn&quot; class=&quot;btn secondary&quot; type=&quot;button&quot;&gt;&lt;span data-lucide=&quot;monitor&quot; style=&quot;width:16px;height:16px;vertical-align:-3px;margin-right:6px;&quot;&gt;&lt;/span&gt;V&agrave;o ch&#7871; &#273;&#7897; demo&lt;/button&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;button id=&quot;clearTokenBtn&quot; class=&quot;btn danger&quot; type=&quot;button&quot;&gt;&lt;span data-lucide=&quot;trash-2&quot; style=&quot;width:16px;height:16px;vertical-align:-3px;margin-right:6px;&quot;&gt;&lt;/span&gt;X&oacute;a token&lt;/button&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;footerbar&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;span&gt;H&#7895; tr&#7907;: HF Inference API, fallback model, web search HTML, t&#7921; ph&acirc;n t&iacute;ch l&#7895;i.&lt;/span&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;span&gt;Kh&ocirc;ng c&oacute; backend server.&lt;/span&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;main id=&quot;app&quot; class=&quot;app-shell hidden&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;section class=&quot;frame&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;header class=&quot;topbar&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;brand&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;kicker&quot;&gt;T John AI Ultimate&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h1 class=&quot;title&quot;&gt;Admin Dashboard&lt;/h1&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;lede&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Workspace x&#7917; l&yacute; chat v&agrave; Preview Dock hi&#7875;n th&#7883; code. Giao di&#7879;n &#273;&#7897;c l&#7853;p, c&oacute; th&#7875; k&eacute;o th&#7843; l&ecirc;n Vercel ho&#7863;c GitHub Pages.</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;status-row&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;pill live&quot; id=&quot;workspacePill&quot;&gt;Workspace online&lt;/span&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;pill&quot; id=&quot;brainPill&quot;&gt;Brain Center&lt;/span&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;pill&quot;&gt;&lt;strong&gt;Model&lt;/strong&gt; &lt;span id=&quot;activeModelText&quot;&gt;Qwen/Qwen2.5-72B-Instruct&lt;/span&gt;&lt;/span&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/header&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;nav class=&quot;tabs&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;button class=&quot;tab active&quot; data-tab=&quot;workspace&quot;&gt;Workspace&lt;/button&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;button class=&quot;tab&quot; data-tab=&quot;brain&quot;&gt;Brain Center&lt;/button&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;button class=&quot;tab&quot; data-tab=&quot;settings&quot;&gt;Settings&lt;/button&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/nav&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;section id=&quot;workspaceView&quot; class=&quot;grid&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;panel&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;panel-inner&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;panel-head&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2&gt;Workspace Chat Stream&lt;/h2&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;muted&quot;&gt;Text stays here. Code &#273;&#7865;p s&#7869; &#273;&#432;&#7907;c render b&ecirc;n Preview Dock.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;small&quot;&gt;Persistent login: &lt;span id=&quot;tokenStateText&quot;&gt;off&lt;/span&gt;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;chips&quot; id=&quot;promptChips&quot;&gt;&lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div id=&quot;chatLog&quot; class=&quot;chat&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;composer&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;small&quot; for=&quot;promptInput&quot;&gt;G&#7917;i y&ecirc;u c&#7847;u t&#7899;i agent&lt;/label&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;textarea id=&quot;promptInput&quot; placeholder=&quot;V&iacute; d&#7909;: T&#7841;o hero landing page industrial, c&oacute; neon blue, CTA cam r&#7921;c v&agrave; nh&#7883;p th&#7883; gi&aacute;c m&#7841;nh.&quot;&gt;&lt;/textarea&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;composer-footer&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;small&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AI s&#7869; th&#7917; model ch&iacute;nh tr&#432;&#7899;c, r&#7891;i fallback n&#7871;u 404/b&#7853;n. L&#7895;i s&#7869; &#273;&#432;&#7907;c ph&acirc;n t&iacute;ch ngay trong chat.</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div style=&quot;display:flex; gap:10px; flex-wrap:wrap;&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;button id=&quot;retryBtn&quot; class=&quot;btn secondary hidden&quot; type=&quot;button&quot;&gt;&lt;span data-lucide=&quot;rotate-ccw&quot; style=&quot;width:16px;height:16px;vertical-align:-3px;margin-right:6px;&quot;&gt;&lt;/span&gt;Th&#7917; l&#7841;i&lt;/button&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;button id=&quot;sendBtn&quot; class=&quot;btn primary&quot; type=&quot;button&quot;&gt;&lt;span data-lucide=&quot;send&quot; style=&quot;width:16px;height:16px;vertical-align:-3px;margin-right:6px;&quot;&gt;&lt;/span&gt;G&#7917;i t&#7899;i agent&lt;/button&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;aside class=&quot;panel&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;panel-inner side&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;panel-head&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2&gt;Preview Dock&lt;/h2&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;muted&quot;&gt;Highlight.js hi&#7875;n th&#7883; code &#273;&#7865;p m&#7855;t, c&oacute; th&#7875; xem ngay output c&#7911;a agent.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;small&quot;&gt;Self-healing: &lt;span id=&quot;selfHealingState&quot;&gt;ready&lt;/span&gt;&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;side-top&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;row&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div style=&quot;flex:1 1 240px;&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;small&quot; for=&quot;urlsInput&quot;&gt;Web URL / Social URL&lt;/label&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input id=&quot;urlsInput&quot; class=&quot;urlbox&quot; placeholder=&quot;D&aacute;n 1 ho&#7863;c nhi&#7873;u URL, c&aacute;ch nhau b&#7857;ng d&#7845;u xu&#7889;ng d&ograve;ng ho&#7863;c d&#7845;u ph&#7849;y.&quot; /&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div style=&quot;flex:1 1 240px;&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;small&quot; for=&quot;searchInput&quot;&gt;Search HTML&lt;/label&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input id=&quot;searchInput&quot; class=&quot;side-input&quot; placeholder=&quot;T&#7915; kh&oacute;a t&igrave;m web th&#7921;c t&#7871;&quot; /&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;row&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div style=&quot;flex:1 1 220px;&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;small&quot; for=&quot;modeSelect&quot;&gt;Mode&lt;/label&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;select id=&quot;modeSelect&quot; class=&quot;side-input&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option&gt;Chat&lt;/option&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option&gt;Code&lt;/option&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option&gt;Research&lt;/option&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option&gt;Image Prompt&lt;/option&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option&gt;Video Script&lt;/option&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/select&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div style=&quot;flex:1 1 220px;&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;small&quot; for=&quot;tempInput&quot;&gt;Temperature&lt;/label&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input id=&quot;tempInput&quot; class=&quot;side-input&quot; type=&quot;number&quot; min=&quot;0&quot; max=&quot;1.5&quot; step=&quot;0.05&quot; value=&quot;0.35&quot; /&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;codebox&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;pre&gt;&lt;code id=&quot;previewCode&quot; class=&quot;language-javascript&quot;&gt;Ch&#432;a c&oacute; code m&#7899;i.&lt;/code&gt;&lt;/pre&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;mini-card&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;Runtime Diagnostics&lt;/h3&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div id=&quot;diagBox&quot; class=&quot;small&quot;&gt;Ch&#432;a ch&#7841;y.&lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/aside&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/section&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;section id=&quot;brainView&quot; class=&quot;grid hidden&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;panel&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;panel-inner&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;panel-head&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2&gt;Brain Center Lock&lt;/h2&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;muted&quot;&gt;M&ocirc; ph&#7887;ng v&ugrave;ng qu&#7843;n tr&#7883;, l&#432;u token v&agrave; c&aacute;c thi&#7871;t l&#7853;p v&#7853;n h&agrave;nh c&#7909;c b&#7897;.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;auth-card&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;small&quot; for=&quot;brainToken&quot;&gt;HF_TOKEN &#273;&atilde; l&#432;u&lt;/label&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input id=&quot;brainToken&quot; type=&quot;password&quot; placeholder=&quot;Token s&#7869; &#273;&#432;&#7907;c l&#432;u v&agrave;o localStorage&quot; /&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;overlay-actions&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;button id=&quot;brainSaveBtn&quot; class=&quot;btn primary&quot; type=&quot;button&quot;&gt;L&#432;u token&lt;/button&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;button id=&quot;brainForgetBtn&quot; class=&quot;btn secondary&quot; type=&quot;button&quot;&gt;Qu&ecirc;n token&lt;/button&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;mini-card&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;Ghi ch&uacute;&lt;/h3&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;small&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; V&igrave; &#273;&acirc;y l&agrave; file t&#297;nh thu&#7847;n frontend, c&aacute;c t&aacute;c v&#7909; &ldquo;self-healing&rdquo; ch&#7881; c&oacute; th&#7875; ph&#7843;n h&#7891;i trong UI.</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; N&oacute; kh&ocirc;ng th&#7875; v&#432;&#7907;t qua gi&#7899;i h&#7841;n c&#7911;a CORS hay ph&aacute;p l&yacute; c&#7911;a t&#7915;ng website.</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;panel&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;panel-inner&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;panel-head&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2&gt;Model Failover&lt;/h2&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;muted&quot;&gt;&#431;u ti&ecirc;n model m&#7841;nh nh&#7845;t, sau &#273;&oacute; t&#7921; chuy&#7875;n sang fallback &#7893;n &#273;&#7883;nh h&#417;n.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;codebox&quot; style=&quot;min-height: 62vh;&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;pre&gt;&lt;code id=&quot;healthCode&quot; class=&quot;language-json&quot;&gt;{</span></p><p class="c2"><span class="c0">&nbsp; &quot;MODEL_NAME&quot;: &quot;Qwen/Qwen2.5-72B-Instruct&quot;,</span></p><p class="c2"><span class="c0">&nbsp; &quot;FALLBACK_MODEL&quot;: &quot;meta-llama/Llama-3.1-8B-Instruct&quot;</span></p><p class="c2"><span class="c0">}&lt;/code&gt;&lt;/pre&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/section&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;section id=&quot;settingsView&quot; class=&quot;grid hidden&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;panel&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;panel-inner&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;panel-head&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2&gt;Settings&lt;/h2&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;muted&quot;&gt;C&aacute;c gi&aacute; tr&#7883; n&agrave;y l&#432;u trong tr&igrave;nh duy&#7879;t c&#7911;a b&#7841;n.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;mini-card&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;MODEL_NAME&lt;/h3&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input id=&quot;modelNameInput&quot; class=&quot;side-input&quot; type=&quot;text&quot; value=&quot;Qwen/Qwen2.5-72B-Instruct&quot; /&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;small&quot;&gt;&#272;&#7863;t t&ecirc;n model &#7903; &#273;&#7847;u JS &#273;&#7875; b&#7841;n d&#7877; thay AI m&#7899;i sau n&agrave;y.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;mini-card&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;Fallback Model&lt;/h3&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input id=&quot;fallbackModelInput&quot; class=&quot;side-input&quot; type=&quot;text&quot; value=&quot;meta-llama/Llama-3.1-8B-Instruct&quot; /&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;small&quot;&gt;T&#7921; chuy&#7875;n khi model ch&iacute;nh l&#7895;i 404, timeout, ho&#7863;c qu&aacute; t&#7843;i.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;panel&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;panel-inner&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;panel-head&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2&gt;Deployment Notes&lt;/h2&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;muted&quot;&gt;Ch&#7841;y tr&ecirc;n Vercel/GitHub Pages b&#7857;ng 1 file index.html duy nh&#7845;t.&lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;mini-card&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;H&#7841;n ch&#7871; th&#7921;c t&#7871;&lt;/h3&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;small&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; C&aacute;c m&#7841;ng x&atilde; h&#7897;i, Google, v&agrave; m&#7897;t s&#7889; website ch&#7863;n CORS/robots n&ecirc;n vi&#7879;c &ldquo;web search HTML&rdquo; ch&#7881; m&ocirc; ph&#7887;ng</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ho&#7863;c ch&#7881; &#273;&#7885;c &#273;&#432;&#7907;c nh&#7919;ng trang cho ph&eacute;p truy c&#7853;p tr&#7921;c ti&#7871;p t&#7915; tr&igrave;nh duy&#7879;t.</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;mini-card&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;Token&lt;/h3&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=&quot;small&quot;&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Token &#273;&#432;&#7907;c gi&#7919; trong localStorage theo m&aacute;y duy&#7879;t c&#7911;a b&#7841;n. Khi c&#7847;n &#273;&#7893;i token, ch&#7881; vi&#7879;c x&oacute;a v&agrave; nh&#7853;p l&#7841;i.</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &lt;/section&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &lt;/section&gt;</span></p><p class="c2"><span class="c0">&nbsp; &lt;/main&gt;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &lt;script&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; const MODEL_NAME = &#39;Qwen/Qwen2.5-72B-Instruct&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; const FALLBACK_MODEL = &#39;meta-llama/Llama-3.1-8B-Instruct&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; const HF_ENDPOINT = &#39;https://router.huggingface.co/v1/chat/completions&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; const STORAGE_KEY = &#39;tjohn_hf_token&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; const STORAGE_MODEL_KEY = &#39;tjohn_model_name&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; const STORAGE_FALLBACK_KEY = &#39;tjohn_fallback_name&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; const STORAGE_ENDPOINT_KEY = &#39;tjohn_hf_endpoint&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; const STORAGE_HISTORY_KEY = &#39;tjohn_chat_history&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; const STORAGE_WEB_KEY = &#39;tjohn_web_cache&#39;;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; const $ = (id) =&gt; document.getElementById(id);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; const state = {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; token: &#39;&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; modelName: MODEL_NAME,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; fallbackModel: FALLBACK_MODEL,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; endpoint: HF_ENDPOINT,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; history: [],</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; lastPrompt: &#39;&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; lastMode: &#39;Chat&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; lastUrls: [],</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; lastSearch: &#39;&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; busy: false,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; retryPayload: null,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; webCache: {},</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; };</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; const promptChips = [</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &#39;Thi&#7871;t k&#7871; landing page c&ocirc;ng nghi&#7879;p neon blue&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &#39;Ph&acirc;n t&iacute;ch backend hi&#7879;n t&#7841;i c&#7911;a T John AI&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &#39;T&#7841;o component KPI card v&#7899;i animation nh&#7865;&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &#39;Vi&#7871;t prompt t&#7841;o &#7843;nh cinematic v&agrave; sang&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; ];</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function safeParse(json, fallback = null) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; try { return JSON.parse(json); } catch (_) { return fallback; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function loadState() {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; try {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.token = localStorage.getItem(STORAGE_KEY) || &#39;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.modelName = localStorage.getItem(STORAGE_MODEL_KEY) || MODEL_NAME;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.fallbackModel = localStorage.getItem(STORAGE_FALLBACK_KEY) || FALLBACK_MODEL;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.endpoint = localStorage.getItem(STORAGE_ENDPOINT_KEY) || HF_ENDPOINT;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.history = safeParse(localStorage.getItem(STORAGE_HISTORY_KEY), []) || [];</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.webCache = safeParse(localStorage.getItem(STORAGE_WEB_KEY), {}) || {};</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; } catch (error) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; console.warn(&#39;loadState failed&#39;, error);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function persistState() {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; try {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; localStorage.setItem(STORAGE_KEY, state.token);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; localStorage.setItem(STORAGE_MODEL_KEY, state.modelName);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; localStorage.setItem(STORAGE_FALLBACK_KEY, state.fallbackModel);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; localStorage.setItem(STORAGE_ENDPOINT_KEY, state.endpoint);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; localStorage.setItem(STORAGE_HISTORY_KEY, JSON.stringify(state.history.slice(-40)));</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; localStorage.setItem(STORAGE_WEB_KEY, JSON.stringify(state.webCache || {}));</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; } catch (error) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; console.warn(&#39;persistState failed&#39;, error);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function setActiveTab(tab) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; document.querySelectorAll(&#39;.tab&#39;).forEach((btn) =&gt; {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; btn.classList.toggle(&#39;active&#39;, btn.dataset.tab === tab);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;workspaceView&#39;).classList.toggle(&#39;hidden&#39;, tab !== &#39;workspace&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;brainView&#39;).classList.toggle(&#39;hidden&#39;, tab !== &#39;brain&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;settingsView&#39;).classList.toggle(&#39;hidden&#39;, tab !== &#39;settings&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function escapeHtml(str) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; return String(str)</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; .replaceAll(&#39;&amp;&#39;, &#39;&amp;amp;&#39;)</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; .replaceAll(&#39;&lt;&#39;, &#39;&amp;lt;&#39;)</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; .replaceAll(&#39;&gt;&#39;, &#39;&amp;gt;&#39;)</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; .replaceAll(&#39;&quot;&#39;, &#39;&amp;quot;&#39;)</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; .replaceAll(&quot;&#39;&quot;, &#39;&amp;#39;&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function renderMarkdownLite(text) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; const safe = escapeHtml(text || &#39;&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; return safe</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; .replace(/^### (.*)$/gm, &#39;&lt;h3&gt;$1&lt;/h3&gt;&#39;)</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; .replace(/^## (.*)$/gm, &#39;&lt;h2&gt;$1&lt;/h2&gt;&#39;)</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; .replace(/^# (.*)$/gm, &#39;&lt;h1&gt;$1&lt;/h1&gt;&#39;)</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; .replace(/\*\*(.*?)\*\*/g, &#39;&lt;strong&gt;$1&lt;/strong&gt;&#39;)</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; .replace(/\n/g, &#39;&lt;br&gt;&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function renderCodePreview(text) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; const el = $(&#39;previewCode&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; el.textContent = text || &#39;Ch&#432;a c&oacute; code m&#7899;i.&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; try {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; if (window.hljs) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; window.hljs.highlightElement(el);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; } catch (error) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; console.warn(&#39;highlight failed&#39;, error);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function pushMessage(role, content, meta = {}) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; const chat = $(&#39;chatLog&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; const div = document.createElement(&#39;article&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; div.className = `msg ${role}${meta.error ? &#39; error&#39; : &#39;&#39;}`;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; const roleLabel = role === &#39;user&#39; ? &#39;B&#7841;n&#39; : role === &#39;assistant&#39; ? &#39;T John AI&#39; : &#39;L&#7895;i&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; div.innerHTML = `&lt;div class=&quot;role&quot;&gt;${roleLabel}&lt;/div&gt;&lt;div&gt;${renderMarkdownLite(content)}&lt;/div&gt;`;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; if (meta.retry) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const retry = document.createElement(&#39;button&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; retry.className = &#39;btn secondary&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; retry.type = &#39;button&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; retry.textContent = &#39;Th&#7917; l&#7841;i&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; retry.style.marginTop = &#39;12px&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; retry.onclick = () =&gt; sendMessage(meta.retry);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; div.appendChild(retry);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; chat.appendChild(div);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; chat.scrollTop = chat.scrollHeight;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function setDiagnostics(html) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;diagBox&#39;).innerHTML = html;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function setModelText(model) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;activeModelText&#39;).textContent = model;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function setTokenState() {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;tokenStateText&#39;).textContent = state.token ? &#39;on&#39; : &#39;off&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;workspacePill&#39;).innerHTML = state.busy</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; ? &#39;&lt;span class=&quot;spin&quot;&gt;&lt;/span&gt; Agent busy&#39;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; : &#39;Workspace online&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;brainPill&#39;).textContent = state.token ? &#39;Brain Center&#39; : &#39;Brain Center&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function parseUrls(text) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; const value = String(text || &#39;&#39;).trim();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; if (!value) return [];</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; return Array.from(new Set(</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; value</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .split(/[\n,]+/)</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .map((item) =&gt; item.trim())</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .filter(Boolean)</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .filter((item) =&gt; /^https?:\/\//i.test(item))</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; ));</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; async function fetchUrl(url) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; try {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const res = await fetch(url, { mode: &#39;cors&#39; });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const text = await res.text();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const doc = new DOMParser().parseFromString(text, &#39;text/html&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const title = doc.querySelector(&#39;title&#39;)?.textContent?.trim() || &#39;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const paragraphs = Array.from(doc.querySelectorAll(&#39;p,li,h1,h2,h3&#39;))</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .map((n) =&gt; n.textContent.trim())</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .filter(Boolean)</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .slice(0, 25)</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .join(&#39;\n&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; return {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ok: true,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; title,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; url: res.url || url,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; content: paragraphs || text.slice(0, 3000),</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; };</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; } catch (error) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; return { ok: false, error: `${error.name}: ${error.message}` };</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; async function searchHtml(query) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; try {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; if (!query.trim()) return { ok: false, error: &#39;Truy v&#7845;n r&#7895;ng.&#39; };</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const endpoint = `https://html.duckduckgo.com/html/?q=${encodeURIComponent(query)}`;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const res = await fetch(endpoint, { mode: &#39;cors&#39; });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const text = await res.text();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const doc = new DOMParser().parseFromString(text, &#39;text/html&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const results = Array.from(doc.querySelectorAll(&#39;.result&#39;)).slice(0, 5).map((item) =&gt; {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const title = item.querySelector(&#39;.result__title&#39;)?.textContent?.trim() || &#39;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const snippet = item.querySelector(&#39;.result__snippet&#39;)?.textContent?.trim() || &#39;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const url = item.querySelector(&#39;.result__title a&#39;)?.href || &#39;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return { title, snippet, url };</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; return { ok: true, results };</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; } catch (error) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; return { ok: false, error: `${error.name}: ${error.message}` };</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function buildWebContext(query, urls = []) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; return (async () =&gt; {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const parts = [];</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; if (query &amp;&amp; query.trim()) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const search = await searchHtml(query);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (search.ok &amp;&amp; search.results?.length) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; parts.push(</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#39;SEARCH_RESULTS:\n&#39; + search.results.map((item) =&gt;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `- ${item.title} | ${item.snippet} | ${item.url}`</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ).join(&#39;\n&#39;)</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; );</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; parts.push(`SEARCH_ERROR: ${search.error || &#39;no results&#39;}`);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; for (const url of urls) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const cached = state.webCache[url];</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (cached &amp;&amp; (Date.now() - cached.ts) &lt; 300000) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; parts.push(`URL_FETCH:\nTITLE: ${cached.title}\nURL: ${cached.url}\nCONTENT:\n${cached.content}`);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; continue;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const fetched = await fetchUrl(url);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (fetched.ok) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; state.webCache[url] = { ...fetched, ts: Date.now() };</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; parts.push(`URL_FETCH:\nTITLE: ${fetched.title}\nURL: ${fetched.url}\nCONTENT:\n${fetched.content}`);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; parts.push(`URL_ERROR(${url}): ${fetched.error}`);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; persistState();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; return parts.join(&#39;\n\n&#39;).trim();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; })();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function buildMessagesForApi() {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; return state.history.slice(-16).map((item) =&gt; ({</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; role: item.role,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; content: item.content,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; }));</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function buildPrompt(message, mode, webContext) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; const base = [</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &#39;B&#7841;n l&agrave; T John AI Ultimate Mode.&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &#39;Tr&#7843; l&#7901;i b&#7857;ng ti&#7871;ng Vi&#7879;t.&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &#39;N&#7871;u c&#7847;n code, h&atilde;y tr&#7843; v&#7873; code ho&agrave;n ch&#7881;nh ho&#7863;c JSON c&oacute; reply v&agrave; code.&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &#39;N&#7871;u c&oacute; l&#7895;i, h&atilde;y ph&acirc;n t&iacute;ch nguy&ecirc;n nh&acirc;n v&agrave; g&#7907;i &yacute; s&#7917;a.&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &#39;N&#7871;u web_context c&oacute; d&#7919; ki&#7879;n m&#7899;i, &#432;u ti&ecirc;n s&#7917; d&#7909;ng.&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; ];</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; if (mode === &#39;Code&#39;) base.push(&#39;T&#7853;p trung v&agrave;o code ch&#7841;y &#273;&#432;&#7907;c, UI/UX r&otilde; r&agrave;ng, production-grade.&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; if (mode === &#39;Research&#39;) base.push(&#39;T&#7853;p trung v&agrave;o t&oacute;m l&#432;&#7907;c, &#273;&#7889;i chi&#7871;u d&#7919; ki&#7879;n, v&agrave; n&ecirc;u m&#7913;c &#273;&#7897; tin c&#7853;y.&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; if (mode === &#39;Image Prompt&#39;) base.push(&#39;T&#7841;o prompt &#7843;nh v&#7899;i subject, style, lighting, camera, negative prompt.&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; if (mode === &#39;Video Script&#39;) base.push(&#39;T&#7841;o shot list, voiceover, duration, B-roll, v&agrave; pacing.&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; if (webContext) base.push(`WEB_CONTEXT:\n${webContext}`);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; base.push(`USER_MESSAGE:\n${message}`);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; return base.join(&#39;\n\n&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function extractTextFromResponse(payload) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; if (!payload) return &#39;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; if (typeof payload === &#39;string&#39;) return payload;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; if (payload.reply) return String(payload.reply);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; if (payload.choices?.[0]?.message?.content) return payload.choices[0].message.content;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; return JSON.stringify(payload, null, 2);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function normalizeAssistantOutput(raw) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; try {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; if (!raw) return { reply: &#39;&#39;, code: &#39;&#39;, analysis: &#39;&#39; };</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; if (typeof raw === &#39;object&#39; &amp;&amp; raw.reply) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reply: String(raw.reply || &#39;&#39;),</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; code: String(raw.code || &#39;&#39;),</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; analysis: String(raw.analysis || &#39;&#39;),</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; };</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const text = String(raw);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const fenced = text.match(/```(?:\w+)?\n([\s\S]*?)```/);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const code = fenced ? fenced[1].trim() : &#39;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; return {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reply: text.replace(/```[\s\S]*?```/g, &#39;&#39;).trim(),</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; code,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; analysis: &#39;&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; };</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; } catch (_) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; return { reply: String(raw || &#39;&#39;), code: &#39;&#39;, analysis: &#39;&#39; };</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; async function hfFetch(modelName, messagePayload) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; const res = await fetch(state.endpoint, {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; method: &#39;POST&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; headers: {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#39;Content-Type&#39;: &#39;application/json&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#39;Authorization&#39;: `Bearer ${state.token}`,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; },</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; body: JSON.stringify({</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; model: modelName,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; messages: messagePayload,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; max_tokens: 1800,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; temperature: Number($(&#39;tempInput&#39;).value || 0.35),</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; stream: false,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }),</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; const contentType = res.headers.get(&#39;content-type&#39;) || &#39;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; const bodyText = contentType.includes(&#39;application/json&#39;) ? JSON.stringify(await res.json()) : await res.text();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; if (!res.ok) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const err = new Error(`HTTP ${res.status}: ${bodyText.slice(0, 600)}`);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; err.status = res.status;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; err.body = bodyText;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; throw err;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; return contentType.includes(&#39;application/json&#39;) ? JSON.parse(bodyText) : bodyText;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; async function callModelWithFallback(messages, modelList) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; let lastError = null;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; for (const model of modelList) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; try {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const result = await hfFetch(model, messages);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const text = extractTextFromResponse(result);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (!text.trim()) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; throw new Error(&#39;Empty response from model.&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; setModelText(model);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return { ok: true, model, raw: result, text };</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; } catch (error) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; lastError = {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; model,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; name: error.name || &#39;Error&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; message: error.message || String(error),</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; status: error.status || null,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; body: error.body || &#39;&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; };</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (String(error.status) !== &#39;404&#39; &amp;&amp; String(error.status) !== &#39;503&#39;) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; continue;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; return {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; ok: false,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; error: lastError || { name: &#39;Error&#39;, message: &#39;Unknown error&#39; },</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; };</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function errorAnalysis(error, modelList) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; const status = error?.status ? `HTTP ${error.status}` : &#39;API error&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; return [</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &#39;## Self-Healing Report&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; `- **L&#7895;i ch&iacute;nh:** \`${error?.name || &#39;Error&#39;}\``,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; `- **M&ocirc; t&#7843;:** \`${error?.message || &#39;Unknown&#39;}\``,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; `- **Tr&#7841;ng th&aacute;i:** \`${status}\``,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; `- **Fallback &#273;&atilde; th&#7917;:** \`${(modelList || []).join(&#39; &rarr; &#39;)}\``,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &#39;- &#272;&#7873; xu&#7845;t: ki&#7875;m tra token, model availability, ho&#7863;c gi&#7843;m &#273;&#7897; d&agrave;i prompt.&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; ].join(&#39;\n&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function renderRetryBlock(payload) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;retryBtn&#39;).classList.remove(&#39;hidden&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;retryBtn&#39;).onclick = () =&gt; sendMessage(payload, true);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function clearRetryBlock() {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;retryBtn&#39;).classList.add(&#39;hidden&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;retryBtn&#39;).onclick = null;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; async function sendMessage(customText = null, isRetry = false) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; try {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; if (state.busy) return;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const text = String(customText ?? $(&#39;promptInput&#39;).value).trim();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; if (!text) return;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; if (!state.token &amp;&amp; !isRetry) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; openOverlay();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pushMessage(&#39;error&#39;, &#39;Ch&#432;a c&oacute; HF_TOKEN. H&atilde;y nh&#7853;p token tr&#432;&#7899;c.&#39;, { error: true });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.busy = true;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; setTokenState();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; clearRetryBlock();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; $(&#39;sendBtn&#39;).disabled = true;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; $(&#39;promptInput&#39;).value = &#39;&#39;;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.history.push({ role: &#39;user&#39;, content: text });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; persistState();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; pushMessage(&#39;user&#39;, text);</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const urls = parseUrls($(&#39;urlsInput&#39;).value);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.lastUrls = urls;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const searchQuery = $(&#39;searchInput&#39;).value.trim() || text;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.lastSearch = searchQuery;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const webContext = await buildWebContext(searchQuery, urls);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const mode = $(&#39;modeSelect&#39;).value;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.lastMode = mode;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.lastPrompt = text;</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const userPrompt = buildPrompt(text, mode, webContext);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const messages = [</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { role: &#39;system&#39;, content: &#39;You are a helpful, concise, production-grade assistant.&#39; },</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ...buildMessagesForApi(),</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { role: &#39;user&#39;, content: userPrompt },</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; ];</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const modelList = [state.modelName || MODEL_NAME, state.fallbackModel || FALLBACK_MODEL].filter(Boolean);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const result = await callModelWithFallback(messages, modelList);</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; if (!result.ok) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const analysis = errorAnalysis(result.error, modelList);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const reply = `${analysis}\n\n### H&agrave;nh &#273;&#7897;ng\n- Nh&#7845;n **Th&#7917; l&#7841;i**.\n- Ho&#7863;c &#273;&#7893;i token/model trong Settings.`;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; state.history.push({ role: &#39;assistant&#39;, content: reply });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pushMessage(&#39;assistant&#39;, reply, { error: true, retry: text });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; renderRetryBlock(text);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; setDiagnostics(`&lt;div class=&quot;error-box&quot;&gt;&lt;p class=&quot;error-title&quot;&gt;API l&#7895;i nh&#432;ng trang kh&ocirc;ng tr&#7855;ng.&lt;/p&gt;&lt;div&gt;${renderMarkdownLite(analysis)}&lt;/div&gt;&lt;button class=&quot;btn secondary&quot; type=&quot;button&quot; id=&quot;retryInline&quot;&gt;Th&#7917; l&#7841;i&lt;/button&gt;&lt;/div&gt;`);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const retryInline = $(&#39;retryInline&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (retryInline) retryInline.onclick = () =&gt; sendMessage(text, true);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; renderCodePreview(&#39;/* Model error. No code returned. */&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; persistState();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const normalized = normalizeAssistantOutput(result.text);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const reply = normalized.reply || result.text;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.history.push({ role: &#39;assistant&#39;, content: reply });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; persistState();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; pushMessage(&#39;assistant&#39;, reply);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; if (normalized.code) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; renderCodePreview(normalized.code);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; } else if (result.text.includes(&#39;```&#39;)) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const match = result.text.match(/```(?:\w+)?\n([\s\S]*?)```/);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; renderCodePreview(match ? match[1].trim() : result.text);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; } else {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; renderCodePreview(result.text);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const diag = [</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#39;## Runtime Diagnostics&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `- Selected model: \`${result.model}\``,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `- Mode: \`${mode}\``,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `- Token present: \`${Boolean(state.token)}\``,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `- Web URLs: \`${urls.length ? urls.join(&#39;, &#39;) : &#39;none&#39;}\``,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `- Search: \`${searchQuery ? searchQuery.slice(0, 120) : &#39;none&#39;}\``,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; ].join(&#39;\n&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; setDiagnostics(renderMarkdownLite(diag));</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; } catch (error) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const analysis = errorAnalysis(error, [state.modelName, state.fallbackModel].filter(Boolean));</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const reply = `${analysis}\n\n### H&agrave;nh &#273;&#7897;ng\n- Ki&#7875;m tra token / endpoint.\n- Nh&#7845;n **Th&#7917; l&#7841;i** sau v&agrave;i gi&acirc;y.`;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.history.push({ role: &#39;assistant&#39;, content: reply });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; persistState();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; pushMessage(&#39;assistant&#39;, reply, { error: true, retry: customText || $(&#39;promptInput&#39;).value });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; setDiagnostics(`&lt;div class=&quot;error-box&quot;&gt;&lt;p class=&quot;error-title&quot;&gt;Self-Healing Report&lt;/p&gt;&lt;div&gt;${renderMarkdownLite(analysis)}&lt;/div&gt;&lt;button class=&quot;btn secondary&quot; type=&quot;button&quot; id=&quot;retryInline2&quot;&gt;Th&#7917; l&#7841;i&lt;/button&gt;&lt;/div&gt;`);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const retryInline = $(&#39;retryInline2&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; if (retryInline) retryInline.onclick = () =&gt; sendMessage(customText || $(&#39;promptInput&#39;).value, true);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; renderCodePreview(`/* ${error.name || &#39;Error&#39;}: ${error.message || String(error)} */`);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; } finally {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.busy = false;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; $(&#39;sendBtn&#39;).disabled = false;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; setTokenState();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function loadPromptChips() {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; const wrap = $(&#39;promptChips&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; wrap.innerHTML = &#39;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; promptChips.forEach((text) =&gt; {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const btn = document.createElement(&#39;button&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; btn.className = &#39;chip&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; btn.type = &#39;button&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; btn.textContent = text;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; btn.onclick = () =&gt; {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $(&#39;promptInput&#39;).value = text;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sendMessage(text);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; };</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; wrap.appendChild(btn);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function renderHistory() {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;chatLog&#39;).innerHTML = &#39;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; if (!state.history.length) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; pushMessage(&#39;assistant&#39;, &#39;Dashboard &#273;&atilde; s&#7861;n s&agrave;ng. Nh&#7853;p token, r&#7891;i g&#7917;i prompt &#273;&#7875; b&#7855;t &#273;&#7847;u.&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; return;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; for (const item of state.history) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; const role = item.role === &#39;user&#39; ? &#39;user&#39; : &#39;assistant&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; pushMessage(role, item.content, { error: item.role === &#39;assistant&#39; &amp;&amp; /Self-Healing Report|L&#7895;i ch&iacute;nh/i.test(item.content || &#39;&#39;) });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function openOverlay() {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;overlay&#39;).classList.remove(&#39;hidden&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;app&#39;).classList.add(&#39;hidden&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function closeOverlay() {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;overlay&#39;).classList.add(&#39;hidden&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;app&#39;).classList.remove(&#39;hidden&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function syncInputs() {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;tokenInput&#39;).value = state.token || &#39;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;brainToken&#39;).value = state.token || &#39;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;modelInput&#39;).value = state.modelName || MODEL_NAME;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;fallbackInput&#39;).value = state.fallbackModel || FALLBACK_MODEL;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;endpointInput&#39;).value = state.endpoint || HF_ENDPOINT;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;modelNameInput&#39;).value = state.modelName || MODEL_NAME;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;fallbackModelInput&#39;).value = state.fallbackModel || FALLBACK_MODEL;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;activeModelText&#39;).textContent = state.modelName || MODEL_NAME;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; setTokenState();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function saveTokenFromInputs() {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; state.token = $(&#39;tokenInput&#39;).value.trim() || $(&#39;brainToken&#39;).value.trim();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; state.modelName = $(&#39;modelInput&#39;).value.trim() || MODEL_NAME;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; state.fallbackModel = $(&#39;fallbackInput&#39;).value.trim() || FALLBACK_MODEL;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; state.endpoint = $(&#39;endpointInput&#39;).value.trim() || HF_ENDPOINT;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; persistState();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; syncInputs();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; closeOverlay();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; renderHistory();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; setDiagnostics(&#39;## Runtime Diagnostics\n- Token saved in localStorage.\n- Dashboard unlocked.&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function saveSettings() {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; state.modelName = $(&#39;modelNameInput&#39;).value.trim() || MODEL_NAME;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; state.fallbackModel = $(&#39;fallbackModelInput&#39;).value.trim() || FALLBACK_MODEL;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;modelInput&#39;).value = state.modelName;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;fallbackInput&#39;).value = state.fallbackModel;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; persistState();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; setModelText(state.modelName);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; setDiagnostics(</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; [</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#39;## Settings Saved&#39;,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `- MODEL_NAME: \`${state.modelName}\``,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `- Fallback: \`${state.fallbackModel}\``,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `- Endpoint: \`${state.endpoint}\``,</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; ].join(&#39;\n&#39;)</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; );</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function initEvents() {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; document.querySelectorAll(&#39;.tab&#39;).forEach((btn) =&gt; {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; btn.addEventListener(&#39;click&#39;, () =&gt; setActiveTab(btn.dataset.tab));</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;saveTokenBtn&#39;).addEventListener(&#39;click&#39;, saveTokenFromInputs);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;brainSaveBtn&#39;).addEventListener(&#39;click&#39;, saveTokenFromInputs);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;brainForgetBtn&#39;).addEventListener(&#39;click&#39;, () =&gt; {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.token = &#39;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; persistState();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; syncInputs();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; openOverlay();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; setDiagnostics(&#39;## Runtime Diagnostics\n- Token cleared.&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;clearTokenBtn&#39;).addEventListener(&#39;click&#39;, () =&gt; {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.token = &#39;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; persistState();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; syncInputs();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; openOverlay();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;useDemoBtn&#39;).addEventListener(&#39;click&#39;, () =&gt; {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.token = &#39;&#39;;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; persistState();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; syncInputs();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; closeOverlay();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; setDiagnostics(&#39;## Demo Mode\n- Token not required until you hit the API.&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;sendBtn&#39;).addEventListener(&#39;click&#39;, () =&gt; sendMessage());</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;retryBtn&#39;).addEventListener(&#39;click&#39;, () =&gt; sendMessage(state.lastPrompt, true));</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;promptInput&#39;).addEventListener(&#39;keydown&#39;, (event) =&gt; {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; if (event.key === &#39;Enter&#39; &amp;&amp; (event.ctrlKey || event.metaKey)) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; event.preventDefault();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sendMessage();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;modelNameInput&#39;).addEventListener(&#39;change&#39;, saveSettings);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;fallbackModelInput&#39;).addEventListener(&#39;change&#39;, saveSettings);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;modelInput&#39;).addEventListener(&#39;change&#39;, saveSettings);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;fallbackInput&#39;).addEventListener(&#39;change&#39;, saveSettings);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; $(&#39;endpointInput&#39;).addEventListener(&#39;change&#39;, () =&gt; {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; state.endpoint = $(&#39;endpointInput&#39;).value.trim() || HF_ENDPOINT;</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; persistState();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; });</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; function boot() {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; loadState();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; syncInputs();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; loadPromptChips();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; initEvents();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; renderHistory();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; setActiveTab(&#39;workspace&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; if (state.token) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; closeOverlay();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; } else {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; openOverlay();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; setDiagnostics(&#39;## Runtime Diagnostics\n- Ready.&#39;);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; setTokenState();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; try {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; if (window.lucide &amp;&amp; typeof window.lucide.createIcons === &#39;function&#39;) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; window.lucide.createIcons();</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; } catch (error) {</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; &nbsp; console.warn(&#39;lucide init failed&#39;, error);</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; &nbsp; }</span></p><p class="c2"><span class="c0">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c0"></span></p><p class="c2"><span class="c0">&nbsp; &nbsp; boot();</span></p><p class="c2"><span class="c0">&nbsp; &lt;/script&gt;</span></p><p class="c2"><span class="c0">&lt;/body&gt;</span></p><p class="c2"><span class="c0">&lt;/html&gt;</span></p><p class="c1"><span class="c0"></span></p></body></html>
+
+<!doctype html>
+
+<html lang="vi">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>T John AI Ultimate</title>
+
+  <meta name="description" content="T John AI Ultimate - Single-file dashboard for Hugging Face Spaces, Vercel, and GitHub Pages." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/styles/github-dark.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/lib/highlight.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/lib/languages/javascript.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/lib/languages/python.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/lib/languages/css.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/lib/languages/xml.min.js"></script>
+
+  <style>
+
+    :root {
+
+      --bg0: #060a12;
+
+      --bg1: #0b1220;
+
+      --bg2: #111b2e;
+
+      --panel: rgba(12, 17, 30, 0.78);
+
+      --panel-strong: rgba(15, 21, 36, 0.96);
+
+      --line: rgba(127, 199, 255, 0.14);
+
+      --text: #e7eef9;
+
+      --muted: rgba(231, 238, 249, 0.72);
+
+      --blue: #7fc7ff;
+
+      --blue-2: #4aa3ff;
+
+      --orange: #ff8c38;
+
+      --orange-2: #ffb066;
+
+      --green: #42d392;
+
+      --red: #ff6b6b;
+
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.36);
+
+      --radius-xl: 30px;
+
+      --radius-lg: 22px;
+
+      --radius-md: 16px;
+
+      --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+      --sans: "IBM Plex Sans", system-ui, sans-serif;
+
+      --title: "Bricolage Grotesque", system-ui, sans-serif;
+
+    }
+
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+
+      margin: 0;
+
+      min-width: 320px;
+
+      min-height: 100vh;
+
+      color: var(--text);
+
+      font-family: var(--sans);
+
+      background:
+
+        radial-gradient(circle at top left, rgba(74, 163, 255, 0.28), transparent 26%),
+
+        radial-gradient(circle at top right, rgba(127, 199, 255, 0.12), transparent 22%),
+
+        radial-gradient(circle at bottom right, rgba(255, 140, 56, 0.08), transparent 22%),
+
+        linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 44%, #05070d 100%);
+
+      overflow-x: hidden;
+
+    }
+
+    button, input, textarea, select { font: inherit; }
+
+    a { color: inherit; }
+
+
+    .app-shell {
+
+      min-height: 100vh;
+
+      padding: 24px;
+
+    }
+
+    .frame {
+
+      min-height: calc(100vh - 48px);
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      border-radius: 34px;
+
+      background:
+
+        linear-gradient(145deg, rgba(74, 163, 255, 0.12), transparent 22%),
+
+        linear-gradient(315deg, rgba(255, 140, 56, 0.08), transparent 20%),
+
+        rgba(8, 12, 20, 0.92);
+
+      box-shadow: var(--shadow);
+
+      backdrop-filter: blur(24px);
+
+      padding: 24px;
+
+    }
+
+    .topbar {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 16px;
+
+      align-items: flex-start;
+
+      margin-bottom: 20px;
+
+    }
+
+    .brand {
+
+      display: grid;
+
+      gap: 10px;
+
+    }
+
+    .kicker {
+
+      margin: 0;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.28em;
+
+      font-size: 12px;
+
+      color: var(--blue);
+
+    }
+
+    .title {
+
+      margin: 0;
+
+      font-family: var(--title);
+
+      font-size: clamp(2rem, 4vw, 3.6rem);
+
+      letter-spacing: -0.04em;
+
+      line-height: 0.94;
+
+    }
+
+    .lede {
+
+      max-width: 72ch;
+
+      margin: 0;
+
+      color: var(--muted);
+
+      line-height: 1.65;
+
+    }
+
+    .status-row {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      align-items: flex-start;
+
+      justify-content: flex-end;
+
+    }
+
+    .pill {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding: 10px 14px;
+
+      border-radius: 999px;
+
+      background: rgba(255,255,255,0.05);
+
+      border: 1px solid rgba(255,255,255,0.09);
+
+      color: var(--text);
+
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+
+      white-space: nowrap;
+
+    }
+
+    .pill strong { color: var(--blue); font-weight: 700; }
+
+    .pill.live { border-color: rgba(66, 211, 146, 0.24); color: #c9ffe5; }
+
+    .pill.locked { border-color: rgba(255, 107, 107, 0.22); color: #ffd2d2; }
+
+    .tabs {
+
+      display: inline-flex;
+
+      gap: 10px;
+
+      padding: 8px;
+
+      border-radius: 999px;
+
+      background: rgba(255,255,255,0.04);
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      margin-bottom: 20px;
+
+    }
+
+    .tab {
+
+      border: 0;
+
+      border-radius: 999px;
+
+      padding: 11px 18px;
+
+      background: transparent;
+
+      color: var(--text);
+
+      cursor: pointer;
+
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+
+    }
+
+    .tab:hover, .btn:hover, .chip:hover { transform: translateY(-1px); }
+
+    .tab.active {
+
+      background: linear-gradient(135deg, rgba(74, 163, 255, 0.24), rgba(49, 112, 255, 0.18));
+
+      border: 1px solid rgba(127, 199, 255, 0.24);
+
+    }
+
+    .grid {
+
+      display: grid;
+
+      grid-template-columns: minmax(360px, 0.92fr) minmax(440px, 1.08fr);
+
+      gap: 18px;
+
+      min-height: calc(100vh - 220px);
+
+    }
+
+    .panel {
+
+      border-radius: var(--radius-xl);
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), transparent 22%), var(--panel);
+
+      overflow: hidden;
+
+      min-height: 0;
+
+    }
+
+    .panel-inner {
+
+      padding: 20px;
+
+      display: grid;
+
+      gap: 16px;
+
+      min-height: 100%;
+
+    }
+
+    .panel-head {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 16px;
+
+      align-items: flex-start;
+
+    }
+
+    .panel-head h2 {
+
+      margin: 0;
+
+      font-family: var(--title);
+
+      letter-spacing: -0.04em;
+
+      font-size: 1.5rem;
+
+    }
+
+    .muted { color: var(--muted); }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .chip {
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      background: rgba(255,255,255,0.05);
+
+      color: var(--text);
+
+      padding: 10px 14px;
+
+      border-radius: 999px;
+
+      cursor: pointer;
+
+    }
+
+    .chat {
+
+      min-height: 0;
+
+      overflow: auto;
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 14px;
+
+      padding-right: 4px;
+
+      max-height: 52vh;
+
+    }
+
+    .msg {
+
+      max-width: 94%;
+
+      padding: 15px 16px;
+
+      border-radius: 18px;
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      animation: fadeIn .18s ease both;
+
+      white-space: pre-wrap;
+
+      line-height: 1.7;
+
+    }
+
+    .msg.user {
+
+      align-self: flex-end;
+
+      background: linear-gradient(135deg, rgba(255, 140, 56, 0.18), rgba(255, 176, 102, 0.12));
+
+    }
+
+    .msg.assistant {
+
+      align-self: flex-start;
+
+      background: rgba(255,255,255,0.04);
+
+    }
+
+    .msg.error {
+
+      align-self: flex-start;
+
+      background: rgba(255, 107, 107, 0.12);
+
+      border-color: rgba(255, 107, 107, 0.22);
+
+    }
+
+    .msg .role {
+
+      display: inline-block;
+
+      margin-bottom: 8px;
+
+      text-transform: uppercase;
+
+      letter-spacing: .18em;
+
+      color: var(--blue);
+
+      font-size: 12px;
+
+    }
+
+    .composer, .auth-card, .mini-card {
+
+      border-radius: var(--radius-lg);
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      background: rgba(255,255,255,0.04);
+
+      padding: 16px;
+
+    }
+
+    .composer textarea, .auth-card input, .side-input, .urlbox {
+
+      width: 100%;
+
+      border: 1px solid rgba(255,255,255,0.10);
+
+      background: rgba(4, 8, 16, 0.78);
+
+      color: var(--text);
+
+      border-radius: 16px;
+
+      padding: 14px 15px;
+
+      outline: none;
+
+    }
+
+    .composer textarea, .urlbox { min-height: 112px; resize: vertical; }
+
+    .composer textarea:focus, .auth-card input:focus, .side-input:focus, .urlbox:focus {
+
+      border-color: rgba(127, 199, 255, 0.45);
+
+      box-shadow: 0 0 0 3px rgba(74, 163, 255, 0.12);
+
+    }
+
+    .composer-footer, .row {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: flex-start;
+
+      gap: 12px;
+
+      flex-wrap: wrap;
+
+    }
+
+    .btn {
+
+      border: 0;
+
+      border-radius: 999px;
+
+      padding: 12px 18px;
+
+      cursor: pointer;
+
+      transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+
+    }
+
+    .btn.primary {
+
+      background: linear-gradient(135deg, var(--orange), #ff6e1b);
+
+      color: white;
+
+      box-shadow: 0 18px 36px rgba(255, 116, 35, 0.24);
+
+      font-weight: 700;
+
+    }
+
+    .btn.secondary {
+
+      background: rgba(255,255,255,0.06);
+
+      color: var(--text);
+
+      border: 1px solid rgba(255,255,255,0.1);
+
+    }
+
+    .btn.danger {
+
+      background: rgba(255, 107, 107, 0.14);
+
+      color: #ffd7d7;
+
+      border: 1px solid rgba(255, 107, 107, 0.18);
+
+    }
+
+    .btn:disabled {
+
+      opacity: 0.6;
+
+      cursor: not-allowed;
+
+      transform: none !important;
+
+    }
+
+    .small {
+
+      font-size: 0.92rem;
+
+      color: var(--muted);
+
+      line-height: 1.55;
+
+    }
+
+    .error-box {
+
+      border: 1px solid rgba(255, 107, 107, 0.2);
+
+      background: rgba(255, 107, 107, 0.08);
+
+      color: #ffd8d8;
+
+      border-radius: 18px;
+
+      padding: 14px 16px;
+
+      display: grid;
+
+      gap: 10px;
+
+    }
+
+    .error-title { margin: 0; font-weight: 700; }
+
+    .side {
+
+      display: grid;
+
+      gap: 16px;
+
+      min-height: 0;
+
+    }
+
+    .side-grid {
+
+      display: grid;
+
+      grid-template-columns: 1fr;
+
+      gap: 14px;
+
+    }
+
+    .side-top {
+
+      display: grid;
+
+      gap: 12px;
+
+    }
+
+    .codebox {
+
+      border-radius: 20px;
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      overflow: hidden;
+
+      background: #0b1020;
+
+      min-height: 52vh;
+
+      display: flex;
+
+      flex-direction: column;
+
+    }
+
+    .codebox pre {
+
+      margin: 0;
+
+      padding: 16px;
+
+      overflow: auto;
+
+      flex: 1;
+
+      font-family: var(--mono);
+
+      font-size: 13px;
+
+      line-height: 1.6;
+
+    }
+
+    .codebox code { font-family: var(--mono); }
+
+    .mini-card h3 {
+
+      margin: 0 0 8px;
+
+      font-family: var(--title);
+
+      letter-spacing: -0.03em;
+
+    }
+
+    .overlay {
+
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 50;
+
+      display: grid;
+
+      place-items: center;
+
+      padding: 18px;
+
+      background:
+
+        radial-gradient(circle at top, rgba(74, 163, 255, 0.22), transparent 28%),
+
+        rgba(2, 5, 12, 0.92);
+
+      backdrop-filter: blur(18px);
+
+    }
+
+    .overlay.hidden { display: none; }
+
+    .overlay-card {
+
+      width: min(760px, 100%);
+
+      border-radius: 28px;
+
+      border: 1px solid rgba(127, 199, 255, 0.18);
+
+      background: linear-gradient(180deg, rgba(18, 24, 40, 0.98), rgba(8, 12, 20, 0.98));
+
+      box-shadow: var(--shadow);
+
+      padding: 24px;
+
+    }
+
+    .overlay-card h2 {
+
+      margin: 0;
+
+      font-family: var(--title);
+
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+
+      letter-spacing: -0.04em;
+
+    }
+
+    .overlay-card p { color: var(--muted); line-height: 1.6; }
+
+    .overlay-grid {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 14px;
+
+      margin-top: 16px;
+
+    }
+
+    .overlay-grid input {
+
+      width: 100%;
+
+      padding: 14px 15px;
+
+      border-radius: 14px;
+
+      border: 1px solid rgba(255,255,255,0.10);
+
+      background: rgba(4, 8, 16, 0.78);
+
+      color: var(--text);
+
+      outline: none;
+
+    }
+
+    .overlay-actions {
+
+      margin-top: 16px;
+
+      display: flex;
+
+      gap: 10px;
+
+      flex-wrap: wrap;
+
+    }
+
+    .footerbar {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 12px;
+
+      flex-wrap: wrap;
+
+      margin-top: 16px;
+
+      color: var(--muted);
+
+      font-size: 0.94rem;
+
+    }
+
+    .hidden { display: none !important; }
+
+    .spin {
+
+      display: inline-block;
+
+      width: 12px;
+
+      height: 12px;
+
+      border-radius: 999px;
+
+      border: 2px solid rgba(255,255,255,0.18);
+
+      border-top-color: white;
+
+      animation: spin 1s linear infinite;
+
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @keyframes fadeIn {
+
+      from { opacity: 0; transform: translateY(6px); }
+
+      to { opacity: 1; transform: translateY(0); }
+
+    }
+
+    @media (max-width: 1120px) {
+
+      .grid { grid-template-columns: 1fr; }
+
+      .codebox { min-height: 42vh; }
+
+      .overlay-grid { grid-template-columns: 1fr; }
+
+      .topbar { flex-direction: column; }
+
+      .status-row { justify-content: flex-start; }
+
+    }
+
+    @media (max-width: 720px) {
+
+      .app-shell { padding: 12px; }
+
+      .frame { padding: 14px; border-radius: 24px; }
+
+      .chat { max-height: 38vh; }
+
+      .msg { max-width: 100%; }
+
+      .panel-inner { padding: 14px; }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div id="overlay" class="overlay">
+
+    <div class="overlay-card">
+
+      <p class="kicker">Persistent Login</p>
+
+      <h2>Nhập HF_TOKEN để vào thẳng Dashboard</h2>
+
+      <p>
+
+        Token sẽ được lưu bằng <code>localStorage</code> trên trình duyệt của bạn.
+
+        Lần mở sau, trang sẽ tự nhận diện và vào trực tiếp giao diện điều khiển.
+
+      </p>
+
+      <div class="overlay-grid">
+
+        <div>
+
+          <label class="small" for="tokenInput">HF_TOKEN</label>
+
+          <input id="tokenInput" type="password" autocomplete="off" placeholder="hf_..." />
+
+        </div>
+
+        <div>
+
+          <label class="small" for="modelInput">MODEL_NAME</label>
+
+          <input id="modelInput" type="text" value="Qwen/Qwen2.5-72B-Instruct" />
+
+        </div>
+
+      </div>
+
+      <div class="overlay-grid" style="margin-top: 12px;">
+
+        <div>
+
+          <label class="small" for="fallbackInput">Fallback model</label>
+
+          <input id="fallbackInput" type="text" value="meta-llama/Llama-3.1-8B-Instruct" />
+
+        </div>
+
+        <div>
+
+          <label class="small" for="endpointInput">HF Endpoint</label>
+
+          <input id="endpointInput" type="text" value="https://router.huggingface.co/v1/chat/completions" />
+
+        </div>
+
+      </div>
+
+      <div class="overlay-actions">
+
+        <button id="saveTokenBtn" class="btn primary" type="button"><span data-lucide="lock-keyhole-open" style="width:16px;height:16px;vertical-align:-3px;margin-right:6px;"></span>Lưu token & Vào Dashboard</button>
+
+        <button id="useDemoBtn" class="btn secondary" type="button"><span data-lucide="monitor" style="width:16px;height:16px;vertical-align:-3px;margin-right:6px;"></span>Vào chế độ demo</button>
+
+        <button id="clearTokenBtn" class="btn danger" type="button"><span data-lucide="trash-2" style="width:16px;height:16px;vertical-align:-3px;margin-right:6px;"></span>Xóa token</button>
+
+      </div>
+
+      <div class="footerbar">
+
+        <span>Hỗ trợ: HF Inference API, fallback model, web search HTML, tự phân tích lỗi.</span>
+
+        <span>Không có backend server.</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <main id="app" class="app-shell hidden">
+
+    <section class="frame">
+
+      <header class="topbar">
+
+        <div class="brand">
+
+          <p class="kicker">T John AI Ultimate</p>
+
+          <h1 class="title">Admin Dashboard</h1>
+
+          <p class="lede">
+
+            Workspace xử lý chat và Preview Dock hiển thị code. Giao diện độc lập, có thể kéo thả lên Vercel hoặc GitHub Pages.
+
+          </p>
+
+        </div>
+
+        <div class="status-row">
+
+          <span class="pill live" id="workspacePill">Workspace online</span>
+
+          <span class="pill" id="brainPill">Brain Center</span>
+
+          <span class="pill"><strong>Model</strong> <span id="activeModelText">Qwen/Qwen2.5-72B-Instruct</span></span>
+
+        </div>
+
+      </header>
+
+
+      <nav class="tabs">
+
+        <button class="tab active" data-tab="workspace">Workspace</button>
+
+        <button class="tab" data-tab="brain">Brain Center</button>
+
+        <button class="tab" data-tab="settings">Settings</button>
+
+      </nav>
+
+
+      <section id="workspaceView" class="grid">
+
+        <div class="panel">
+
+          <div class="panel-inner">
+
+            <div class="panel-head">
+
+              <div>
+
+                <h2>Workspace Chat Stream</h2>
+
+                <p class="muted">Text stays here. Code đẹp sẽ được render bên Preview Dock.</p>
+
+              </div>
+
+              <div class="small">Persistent login: <span id="tokenStateText">off</span></div>
+
+            </div>
+
+
+            <div class="chips" id="promptChips"></div>
+
+
+            <div id="chatLog" class="chat" aria-live="polite"></div>
+
+
+            <div class="composer">
+
+              <label class="small" for="promptInput">Gửi yêu cầu tới agent</label>
+
+              <textarea id="promptInput" placeholder="Ví dụ: Tạo hero landing page industrial, có neon blue, CTA cam rực và nhịp thị giác mạnh."></textarea>
+
+              <div class="composer-footer">
+
+                <div class="small">
+
+                  AI sẽ thử model chính trước, rồi fallback nếu 404/bận. Lỗi sẽ được phân tích ngay trong chat.
+
+                </div>
+
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+
+                  <button id="retryBtn" class="btn secondary hidden" type="button"><span data-lucide="rotate-ccw" style="width:16px;height:16px;vertical-align:-3px;margin-right:6px;"></span>Thử lại</button>
+
+                  <button id="sendBtn" class="btn primary" type="button"><span data-lucide="send" style="width:16px;height:16px;vertical-align:-3px;margin-right:6px;"></span>Gửi tới agent</button>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <aside class="panel">
+
+          <div class="panel-inner side">
+
+            <div class="panel-head">
+
+              <div>
+
+                <h2>Preview Dock</h2>
+
+                <p class="muted">Highlight.js hiển thị code đẹp mắt, có thể xem ngay output của agent.</p>
+
+              </div>
+
+              <div class="small">Self-healing: <span id="selfHealingState">ready</span></div>
+
+            </div>
+
+
+            <div class="side-top">
+
+              <div class="row">
+
+                <div style="flex:1 1 240px;">
+
+                  <label class="small" for="urlsInput">Web URL / Social URL</label>
+
+                  <input id="urlsInput" class="urlbox" placeholder="Dán 1 hoặc nhiều URL, cách nhau bằng dấu xuống dòng hoặc dấu phẩy." />
+
+                </div>
+
+                <div style="flex:1 1 240px;">
+
+                  <label class="small" for="searchInput">Search HTML</label>
+
+                  <input id="searchInput" class="side-input" placeholder="Từ khóa tìm web thực tế" />
+
+                </div>
+
+              </div>
+
+
+              <div class="row">
+
+                <div style="flex:1 1 220px;">
+
+                  <label class="small" for="modeSelect">Mode</label>
+
+                  <select id="modeSelect" class="side-input">
+
+                    <option>Chat</option>
+
+                    <option>Code</option>
+
+                    <option>Research</option>
+
+                    <option>Image Prompt</option>
+
+                    <option>Video Script</option>
+
+                  </select>
+
+                </div>
+
+                <div style="flex:1 1 220px;">
+
+                  <label class="small" for="tempInput">Temperature</label>
+
+                  <input id="tempInput" class="side-input" type="number" min="0" max="1.5" step="0.05" value="0.35" />
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="codebox">
+                      }),
+
+      });
+
+      const contentType = res.headers.get('content-type') || '';
+
+      const bodyText = contentType.includes('application/json') ? JSON.stringify(await res.json()) : await res.text();
+
+      if (!res.ok) {
+
+        const err = new Error(`HTTP ${res.status}: ${bodyText.slice(0, 600)}`);
+
+        err.status = res.status;
+
+        err.body = bodyText;
+
+        throw err;
+
+      }
+
+      return contentType.includes('application/json') ? JSON.parse(bodyText) : bodyText;
+
+    }
+
+
+    async function callModelWithFallback(messages, modelList) {
+
+      let lastError = null;
+
+      for (const model of modelList) {
+
+        try {
+
+          const result = await hfFetch(model, messages);
+
+          const text = extractTextFromResponse(result);
+
+          if (!text.trim()) {
+
+            throw new Error('Empty response from model.');
+
+          }
+
+          setModelText(model);
+
+          return { ok: true, model, raw: result, text };
+
+        } catch (error) {
+
+          lastError = {
+
+            model,
+
+            name: error.name || 'Error',
+
+            message: error.message || String(error),
+
+            status: error.status || null,
+
+            body: error.body || '',
+
+          };
+
+          if (String(error.status) !== '404' && String(error.status) !== '503') {
+
+            continue;
+
+          }
+
+        }
+
+      }
+
+      return {
+
+        ok: false,
+
+        error: lastError || { name: 'Error', message: 'Unknown error' },
+
+      };
+
+    }
+
+
+    function errorAnalysis(error, modelList) {
+
+      const status = error?.status ? `HTTP ${error.status}` : 'API error';
+
+      return [
+
+        '## Self-Healing Report',
+
+        `- **Lỗi chính:** \`${error?.name || 'Error'}\``,
+
+        `- **Mô tả:** \`${error?.message || 'Unknown'}\``,
+
+        `- **Trạng thái:** \`${status}\``,
+
+        `- **Fallback đã thử:** \`${(modelList || []).join(' → ')}\``,
+
+        '- Đề xuất: kiểm tra token, model availability, hoặc giảm độ dài prompt.',
+
+      ].join('\n');
+
+    }
+
+
+    function renderRetryBlock(payload) {
+
+      $('retryBtn').classList.remove('hidden');
+
+      $('retryBtn').onclick = () => sendMessage(payload, true);
+
+    }
+
+
+    function clearRetryBlock() {
+
+      $('retryBtn').classList.add('hidden');
+
+      $('retryBtn').onclick = null;
+
+    }
+
+
+    async function sendMessage(customText = null, isRetry = false) {
+
+      try {
+
+        if (state.busy) return;
+
+        const text = String(customText ?? $('promptInput').value).trim();
+
+        if (!text) return;
+
+        if (!state.token && !isRetry) {
+
+          openOverlay();
+
+          pushMessage('error', 'Chưa có HF_TOKEN. Hãy nhập token trước.', { error: true });
+
+          return;
+
+        }
+
+        state.busy = true;
+
+        setTokenState();
+
+        clearRetryBlock();
+
+        $('sendBtn').disabled = true;
+
+        $('promptInput').value = '';
+
+
+        state.history.push({ role: 'user', content: text });
+
+        persistState();
+
+        pushMessage('user', text);
+
+
+        const urls = parseUrls($('urlsInput').value);
+
+        state.lastUrls = urls;
+
+        const searchQuery = $('searchInput').value.trim() || text;
+
+        state.lastSearch = searchQuery;
+
+        const webContext = await buildWebContext(searchQuery, urls);
+
+        const mode = $('modeSelect').value;
+
+        state.lastMode = mode;
+
+        state.lastPrompt = text;
+
+
+        const userPrompt = buildPrompt(text, mode, webContext);
+
+        const messages = [
+
+          { role: 'system', content: 'You are a helpful, concise, production-grade assistant.' },
+
+          ...buildMessagesForApi(),
+
+          { role: 'user', content: userPrompt },
+
+        ];
+
+
+        const modelList = [state.modelName || MODEL_NAME, state.fallbackModel || FALLBACK_MODEL].filter(Boolean);
+
+        const result = await callModelWithFallback(messages, modelList);
+
+
+        if (!result.ok) {
+
+          const analysis = errorAnalysis(result.error, modelList);
+
+          const reply = `${analysis}\n\n### Hành động\n- Nhấn **Thử lại**.\n- Hoặc đổi token/model trong Settings.`;
+
+          state.history.push({ role: 'assistant', content: reply });
+
+          pushMessage('assistant', reply, { error: true, retry: text });
+
+          renderRetryBlock(text);
+
+          setDiagnostics(`<div class="error-box"><p class="error-title">API lỗi nhưng trang không trắng.</p><div>${renderMarkdownLite(analysis)}</div><button class="btn secondary" type="button" id="retryInline">Thử lại</button></div>`);
+
+          const retryInline = $('retryInline');
+
+          if (retryInline) retryInline.onclick = () => sendMessage(text, true);
+
+          renderCodePreview('/* Model error. No code returned. */');
+
+          persistState();
+
+          return;
+
+        }
+
+
+        const normalized = normalizeAssistantOutput(result.text);
+
+        const reply = normalized.reply || result.text;
+
+        state.history.push({ role: 'assistant', content: reply });
+
+        persistState();
+
+        pushMessage('assistant', reply);
+
+        if (normalized.code) {
+
+          renderCodePreview(normalized.code);
+
+        } else if (result.text.includes('```')) {
+
+          const match = result.text.match(/```(?:\w+)?\n([\s\S]*?)```/);
+
+          renderCodePreview(match ? match[1].trim() : result.text);
+
+        } else {
+
+          renderCodePreview(result.text);
+
+        }
+
+        const diag = [
+
+          '## Runtime Diagnostics',
+
+          `- Selected model: \`${result.model}\``,
+
+          `- Mode: \`${mode}\``,
+
+          `- Token present: \`${Boolean(state.token)}\``,
+
+          `- Web URLs: \`${urls.length ? urls.join(', ') : 'none'}\``,
+
+          `- Search: \`${searchQuery ? searchQuery.slice(0, 120) : 'none'}\``,
+
+        ].join('\n');
+
+        setDiagnostics(renderMarkdownLite(diag));
+
+      } catch (error) {
+
+        const analysis = errorAnalysis(error, [state.modelName, state.fallbackModel].filter(Boolean));
+
+        const reply = `${analysis}\n\n### Hành động\n- Kiểm tra token / endpoint.\n- Nhấn **Thử lại** sau vài giây.`;
+
+        state.history.push({ role: 'assistant', content: reply });
+
+        persistState();
+
+        pushMessage('assistant', reply, { error: true, retry: customText || $('promptInput').value });
+
+        setDiagnostics(`<div class="error-box"><p class="error-title">Self-Healing Report</p><div>${renderMarkdownLite(analysis)}</div><button class="btn secondary" type="button" id="retryInline2">Thử lại</button></div>`);
+
+        const retryInline = $('retryInline2');
+
+        if (retryInline) retryInline.onclick = () => sendMessage(customText || $('promptInput').value, true);
+
+        renderCodePreview(`/* ${error.name || 'Error'}: ${error.message || String(error)} */`);
+
+      } finally {
+
+        state.busy = false;
+
+        $('sendBtn').disabled = false;
+
+        setTokenState();
+
+      }
+
+    }
+
+
+    function loadPromptChips() {
+
+      const wrap = $('promptChips');
+
+      wrap.innerHTML = '';
+
+      promptChips.forEach((text) => {
+
+        const btn = document.createElement('button');
+
+        btn.className = 'chip';
+
+        btn.type = 'button';
+
+        btn.textContent = text;
+
+        btn.onclick = () => {
+
+          $('promptInput').value = text;
+
+          sendMessage(text);
+
+        };
+
+        wrap.appendChild(btn);
+
+      });
+
+    }
+
+
+    function renderHistory() {
+
+      $('chatLog').innerHTML = '';
+
+      if (!state.history.length) {
+
+        pushMessage('assistant', 'Dashboard đã sẵn sàng. Nhập token, rồi gửi prompt để bắt đầu.');
+
+        return;
+
+      }
+
+      for (const item of state.history) {
+
+        const role = item.role === 'user' ? 'user' : 'assistant';
+
+        pushMessage(role, item.content, { error: item.role === 'assistant' && /Self-Healing Report|Lỗi chính/i.test(item.content || '') });
+
+      }
+
+    }
+
+
+    function openOverlay() {
+
+      $('overlay').classList.remove('hidden');
+
+      $('app').classList.add('hidden');
+
+    }
+
+
+    function closeOverlay() {
+
+      $('overlay').classList.add('hidden');
+
+      $('app').classList.remove('hidden');
+
+    }
+
+
+    function syncInputs() {
+
+      $('tokenInput').value = state.token || '';
+
+      $('brainToken').value = state.token || '';
+
+      $('modelInput').value = state.modelName || MODEL_NAME;
+
+      $('fallbackInput').value = state.fallbackModel || FALLBACK_MODEL;
+
+      $('endpointInput').value = state.endpoint || HF_ENDPOINT;
+
+      $('modelNameInput').value = state.modelName || MODEL_NAME;
+
+      $('fallbackModelInput').value = state.fallbackModel || FALLBACK_MODEL;
+
+      $('activeModelText').textContent = state.modelName || MODEL_NAME;
+
+      setTokenState();
+
+    }
+
+
+    function saveTokenFromInputs() {
+
+      state.token = $('tokenInput').value.trim() || $('brainToken').value.trim();
+
+      state.modelName = $('modelInput').value.trim() || MODEL_NAME;
+
+      state.fallbackModel = $('fallbackInput').value.trim() || FALLBACK_MODEL;
+
+      state.endpoint = $('endpointInput').value.trim() || HF_ENDPOINT;
+
+      persistState();
+
+      syncInputs();
+
+      closeOverlay();
+
+      renderHistory();
+
+      setDiagnostics('## Runtime Diagnostics\n- Token saved in localStorage.\n- Dashboard unlocked.');
+
+    }
+
+
+    function saveSettings() {
+
+      state.modelName = $('modelNameInput').value.trim() || MODEL_NAME;
+
+      state.fallbackModel = $('fallbackModelInput').value.trim() || FALLBACK_MODEL;
+
+      $('modelInput').value = state.modelName;
+
+      $('fallbackInput').value = state.fallbackModel;
+
+      persistState();
+
+      setModelText(state.modelName);
+
+      setDiagnostics(
+
+        [
+
+          '## Settings Saved',
+
+          `- MODEL_NAME: \`${state.modelName}\``,
+
+          `- Fallback: \`${state.fallbackModel}\``,
+
+          `- Endpoint: \`${state.endpoint}\``,
+
+        ].join('\n')
+
+      );
+
+    }
+
+
+    function initEvents() {
+
+      document.querySelectorAll('.tab').forEach((btn) => {
+
+        btn.addEventListener('click', () => setActiveTab(btn.dataset.tab));
+
+      });
+
+      $('saveTokenBtn').addEventListener('click', saveTokenFromInputs);
+
+      $('brainSaveBtn').addEventListener('click', saveTokenFromInputs);
+
+      $('brainForgetBtn').addEventListener('click', () => {
+
+        state.token = '';
+
+        persistState();
+
+        syncInputs();
+
+        openOverlay();
+
+        setDiagnostics('## Runtime Diagnostics\n- Token cleared.');
+
+      });
+
+      $('clearTokenBtn').addEventListener('click', () => {
+
+        state.token = '';
+
+        persistState();
+
+        syncInputs();
+
+        openOverlay();
+
+      });
+
+      $('useDemoBtn').addEventListener('click', () => {
+
+        state.token = '';
+
+        persistState();
+
+        syncInputs();
+
+        closeOverlay();
+
+        setDiagnostics('## Demo Mode\n- Token not required until you hit the API.');
+
+      });
+
+      $('sendBtn').addEventListener('click', () => sendMessage());
+
+      $('retryBtn').addEventListener('click', () => sendMessage(state.lastPrompt, true));
+
+      $('promptInput').addEventListener('keydown', (event) => {
+
+        if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) {
+
+          event.preventDefault();
+
+          sendMessage();
+
+        }
+
+      });
+
+      $('modelNameInput').addEventListener('change', saveSettings);
+
+      $('fallbackModelInput').addEventListener('change', saveSettings);
+
+      $('modelInput').addEventListener('change', saveSettings);
+
+      $('fallbackInput').addEventListener('change', saveSettings);
+
+      $('endpointInput').addEventListener('change', () => {
+
+        state.endpoint = $('endpointInput').value.trim() || HF_ENDPOINT;
+
+        persistState();
+
+      });
+
+    }
+
+
+    function boot() {
+
+      loadState();
+
+      syncInputs();
+
+      loadPromptChips();
+
+      initEvents();
+
+      renderHistory();
+
+      setActiveTab('workspace');
+
+      if (state.token) {
+
+        closeOverlay();
+
+      } else {
+
+        openOverlay();
+
+      }
+
+      setDiagnostics('## Runtime Diagnostics\n- Ready.');
+
+      setTokenState();
+
+      try {
+
+        if (window.lucide && typeof window.lucide.createIcons === 'function') {
+
+          window.lucide.createIcons();
+
+        }
+
+      } catch (error) {
+
+        console.warn('lucide init failed', error);
+
+      }
+
+    }
+
+
+    boot();
+
+  </script>
+
+</body>
+
+</html>
